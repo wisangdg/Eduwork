@@ -1,40 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>News Page</title>
+    <title>Portal Berita Indonesia</title>
     <link rel="stylesheet" href="news.css" />
   </head>
   <body>
-    <nav>
-      <ul>
-        <li><a href="#" data-category="general">Home</a></li>
-        <li><a href="#" data-category="technology">Technology</a></li>
-        <li><a href="#" data-category="business">Business</a></li>
-        <li><a href="#" data-category="sports">Sports</a></li>
-      </ul>
-      <div class="search-container">
+    <header>
+      <div class="logo">Berita Tidak Jelas</div>
+      <nav>
+        <ul>
+          <li><a href="#">Beranda</a></li>
+          <li><a href="#">Politik</a></li>
+          <li><a href="#">Olahraga</a></li>
+          <li><a href="#">Teknologi</a></li>
+          <li><a href="#">Kontak</a></li>
+        </ul>
+      </nav>
+      <div class="search-bar">
         <input
           type="text"
-          id="searchInput"
+          id="search-input"
           placeholder="Cari berita..."
-          name="search"
+          oninput="liveSearch()"
         />
       </div>
-    </nav>
-    <header>
-      <h1>Berita Terbaru Indonesia</h1>
     </header>
 
-    <main id="newsContainer">
-      <!-- Berita akan dimuat di sini secara dinamis -->
+    <main>
+      <section class="featured-news" id="featured-news">
+        <!-- Berita utama akan dimasukkan di sini -->
+      </section>
+
+      <section class="news-grid" id="news-grid">
+        <!-- Kategori berita tren akan dimasukkan di sini -->
+      </section>
+
+      <aside>
+        <div class="weather-widget">
+          <h3>Perkiraan Cuaca</h3>
+          <p>Cerah, 22°C</p>
+        </div>
+        <div class="ad-space">
+          <h3>Iklan</h3>
+        </div>
+      </aside>
     </main>
 
     <footer>
-      <p>&copy; 2024 Wisang News Site</p>
+      <p>
+        &copy; 2024 Portal Berita Indonesia. Hak cipta dilindungi undang-undang.
+      </p>
     </footer>
 
     <script src="news.js"></script>
+
   </body>
 </html>
