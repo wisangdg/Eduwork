@@ -51,3 +51,5 @@ function printBuku({ judul, harga, pengarang: { nama } }) {
 
 printBuku(buku);
 penjumlahan([10, 5]);
+
+
