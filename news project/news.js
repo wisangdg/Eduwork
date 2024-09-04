@@ -2,7 +2,7 @@ const apiKey = 'd4204d98aee44af0abc7cecdf8c5dfd5';
 const newsGrid = document.getElementById('news-grid');
 let timeoutId;
 
-// Fungsi untuk mengambil berita dari News API
+
 async function fetchNews(query = '') {
     try {
         const apiKey = 'd4204d98aee44af0abc7cecdf8c5dfd5';
@@ -10,7 +10,6 @@ async function fetchNews(query = '') {
         const response = await fetch(url);
         const data = await response.json();
 
-        console.log('Response dari API:', data); // Tambahkan log ini
 
         if (data.status === 'ok') {
             if (data.articles && data.articles.length > 0) {
@@ -27,7 +26,7 @@ async function fetchNews(query = '') {
     }
 }
 
-// Fungsi untuk menampilkan berita
+
 function displayNews(articles) {
     newsGrid.innerHTML = '';
 
@@ -43,7 +42,7 @@ function displayNews(articles) {
     });
 }
 
-// f pencarian langsung
+
 function liveSearch() {
     clearTimeout(timeoutId);
     timeoutId = setTimeout(() => {
@@ -52,10 +51,10 @@ function liveSearch() {
     }, 400); // Tunggu 400ms setelah pengguna berhenti mengetik
 }
 
-// Event listener untuk input pencarian
+
 document.getElementById('search-input').addEventListener('input', liveSearch);
 
-// untuk tampilin berita
+
 document.addEventListener('DOMContentLoaded', () => {
     if (newsGrid) {
         fetchNews();
