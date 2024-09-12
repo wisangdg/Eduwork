@@ -1,60 +1,37 @@
-<!DOCTYPE html>
-<html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portal Berita Indonesia</title>
-    <link rel="stylesheet" href="news.css" />
-  </head>
-  <body>
-    <header>
-      <div class="logo">Berita Tidak Jelas</div>
-      <nav>
-        <ul>
-          <li><a href="#">Beranda</a></li>
-          <li><a href="#">Politik</a></li>
-          <li><a href="#">Olahraga</a></li>
-          <li><a href="#">Teknologi</a></li>
-          <li><a href="#">Kontak</a></li>
-        </ul>
-      </nav>
-      <div class="search-bar">
-        <input
-          type="text"
-          id="search-input"
-          placeholder="Cari berita..."
-          oninput="liveSearch()"
-        />
-      </div>
-    </header>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>News App</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="stylesheet" href="news.css">
+</head>
+<body class="d-flex flex-column min-vh-100"> <!-- Tambahkan kelas Flexbox pada body -->
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">NEWS WEB</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <form class="d-flex ms-auto" id="search-form" onsubmit="return false;">
+        <input class="form-control me-2" type="search" id="search-input" placeholder="Search news..." aria-label="Search">
+      </form>
+    </div>
+  </div>
+</nav>
 
-    <main>
-      <section class="featured-news" id="featured-news">
+<!-- Main Content -->
+<div class="container mt-4 flex-grow-1">
+  <div id="news-grid" class="news-grid"></div>
+</div>
 
-      </section>
 
-      <section class="news-grid" id="news-grid">
-
-      </section>
-
-      <aside>
-        <div class="weather-widget">
-          <h3>Perkiraan Cuaca</h3>
-          <p>Cerah, 22°C</p>
-        </div>
-        <div class="ad-space">
-          <h3>Iklan</h3>
-        </div>
-      </aside>
-    </main>
-
-    <footer>
-      <p>
-        &copy; 2024 Portal Berita. Hak cipta dilindungi undang-undang.
-      </p>
-    </footer>
-
-    <script src="news.js"></script>
-
-  </body>
+<footer class="bg-dark text-light text-center py-3 mt-4">
+  <p>&copy; 2024 News App. All rights reserved.</p>
+</footer>
+<script src="news.js"></script>
+</body>
 </html>
